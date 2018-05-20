@@ -14,10 +14,8 @@ except ImportError:
     import json
 
 # Load our configuration
-config = ConfigParser.ConfigParser()
-config.read(os.path.expanduser('~/.github-mirrorrc'))
 ACCESS_TOKEN = config.get('Github', 'access_token')
-ORGANISATION = config.get('Github', 'organisation')
+ORGANISATION = "WikiToLearn"
 
 # Get the repository name we'll be working with, and the path to the repository (locally)
 REPO_NAME = sys.argv[1]
