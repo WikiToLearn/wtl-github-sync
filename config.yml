@@ -32,10 +32,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-
-      - run:
-          name: Update repositories
-          command: update_repos.sh
+            update_repos.sh
 
       - save_cache:
           paths:
@@ -47,6 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            echo "Hello world"
 
       - store_artifacts:
           path: test-reports
