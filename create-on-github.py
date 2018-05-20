@@ -14,7 +14,7 @@ except ImportError:
     import json
 
 # Load our configuration
-ACCESS_TOKEN = config.get('Github', 'access_token')
+ACCESS_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN')
 ORGANISATION = "WikiToLearn"
 
 # Get the repository name we'll be working with, and the path to the repository (locally)
