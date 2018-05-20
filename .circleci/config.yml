@@ -47,7 +47,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            echo "Hello world"
+            ./sync-to-github.sh
 
       - store_artifacts:
           path: test-reports

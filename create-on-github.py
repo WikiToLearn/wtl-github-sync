@@ -6,7 +6,6 @@
 import os
 import sys
 import requests
-import ConfigParser
 
 try:
     import simplejson as json
@@ -22,7 +21,7 @@ REPO_NAME = sys.argv[1]
 REPO_PATH = sys.argv[2]
 
 # Set a default description
-REPO_DESC = "This repository has no description"
+REPO_DESC = "This repository an automated mirror of git.kde.org. Join us on https://t.me/WikiToLearn"
 
 # Load the description from the path
 descriptionFile = REPO_PATH + "/description"

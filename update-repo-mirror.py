@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Repository mirror updater. Invokes git in a custom manner and transfers across only branch and tag changes. For use with services such as Github/Gitorious
 
 import re
@@ -7,8 +7,7 @@ import subprocess
 
 # Read arguments...
 try:
-    repository_name = sys.argv[1]
-    update_target = sys.argv[2]
+    update_target = sys.argv[1]
 except IndexError:
     usage()
 
@@ -22,7 +21,7 @@ changes = []
 for ref in refs_changed:
     # Look to see if it is done to a branch or tag....
     # Everything else is not relevant - and should be ignored....
-    match = re.match('^[-|*| |+]\t(.*refs/(heads|tags)/\S+)\t(.+)\n', ref)
+    match = re.match('^[-|*| |+]\t(.*refs/(heads|tags)/\S+)\t(.+)\n', ref.decode('utf-8'))
     if match:
         changes.append( match.group(1) )
         continue

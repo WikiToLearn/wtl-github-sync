@@ -1,1 +1,10 @@
+wikitolearn-shared-services
+wikitolearn-courses-backend
 wikitolearn-course-midtier
+wikitolearn-chapters-backend
+wikitolearn-frontend
+wikitolearn-offline-extension
+wikitolearn-pages-backend
+wikitolearn-pwa-gateway
+wikitolearn-sdk
+wikitolearn-shared-services

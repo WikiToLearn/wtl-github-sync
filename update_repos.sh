@@ -8,6 +8,7 @@ for repo in $(cat repository_list.txt);
 do
   if [ -d $checkout_path/$repo ]; then
     cd $checkout_path/$repo
+    pwd
     git pull
     cd ../..
   else
